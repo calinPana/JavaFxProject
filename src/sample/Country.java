@@ -15,6 +15,11 @@ public class Country {
         this.language = language;
     }
 
+    public Country(String name, String capital) {
+        this.name = name;
+        this.capital = capital;
+    }
+
     public String getName() {
         return name;
     }
