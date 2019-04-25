@@ -11,6 +11,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import java.awt.event.MouseEvent;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -119,7 +120,16 @@ public class Controller {
             }
         });
 
-        countriesListView
+        countriesListView.setOnMouseClicked(event -> {
+            Country c =  countriesListView.getSelectionModel().getSelectedItem();
+            System.out.println("clicked on " + c.getName());
+
+            countryName.setText(c.getName());
+            countryCapital.setText(c.getCapital());
+
+
+        });
+
 
 
 
